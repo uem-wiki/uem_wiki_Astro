@@ -1,0 +1,16 @@
+---
+interface Props { title?: string; description?: string }
+const { title = 'Atlas Wiki', description = '一个清晰、可持续维护的知识库。' } = Astro.props;
+---
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content={description} />
+    <title>{title} · Atlas Wiki</title>
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
